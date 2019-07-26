@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+ <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+ <style type="text/css">
+
+     a{
+       float:middle;
+       text-align:center;
+       padding:12px;
+       color:#555;
+       text-decoration:none;
+       font-size:17px;
+    }
+    
+     a:hover {
+       background-color:white;
+    }
+    
+   
+     body{
+            background-image:url("qu2.jpg");
+            background-size:cover;
+            background-repeat:no-repeat;
+     }
+     
+     #parent {
+   display: table;
+   width: 100%;
+}
+#formlogin {
+   display: table-cell;
+   text-align: center;
+   vertical-align:middle;
+}
+
+    #id1 {
+    font-family:Times New Roman;
+}
+     </style>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script
+     src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+     
+  </script>
+  <script 
+    src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js">
+  </script>
+  <script>
+   function validateform() {
+    var name=document.myform.fname.value;
+    var pwd=document.myform.fpwd.value;
+    if(name=="" && pwd==""){
+    	alert("Please enter employeeid and password");
+    }
+    else if( pwd=="") {
+    	alert("Please enter password");
+    }
+  
+   }
+  </script> 
+</head>
+     
+<body>
+ 
+    <h1 align="center" style="color:white;" id="id1"><i>WELCOME TO VIRTUSA VFORUM</i></h1>
+     
+    
+     
+     <div id="parent">  
+       <form id="formlogin" action="ServletPage1" name="myform" method="post" onsubmit="validateform()">
+       <br>
+       <marquee ><h3 style="color:white;">New Joinee? Sign Up here 
+        to get the best answers 
+        for any questions</h3></marquee> 
+      
+       <table>
+                <br>
+                <br>
+                <br>
+               <tr>   <b> Employee Id </b> &nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="fname" placeholder="Employee Id" pattern="[0-9]+" title="Employee id should contain only numbers"/></tr><br>
+                  <br>       
+               <tr>   <b> Password </b>    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" name="fpwd" placeholder="Password"  /></tr><br>
+                   <br>
+               <input type="submit" value="Login"></input>
+               <br>
+               <h4>or</h4>
+              
+               <a href="Registration.html"><i  class="fa fa-fw fa-user-plus"></i>Register</a>
+               
+               </table>
+        
+   </form>
+   </div>
+      
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<style type="text/css">
+  body{
+            background-image:url("qu2.jpg");
+            background-size:cover;
+            background-repeat:no-repeat;
+     }
+     #table1{
+       font-size:20px;
+       margin-left:40%;
+     }
+ </style>
+  <script type="text/javascript">
+    function checkPass()
+    {
+    	String pass=document.getElementByName("password").value;
+    	String conpass=document.getElementByName("confirmPassword").value;
+    	if(pass.equals(conpass))
+    		{
+    		alert("password doesn't match..please re-enter your password");
+    		}
+    }
+    function resetform() {
+    	return confirm("Do you want to reset the form?");
+    }
+  </script>    
+</head>
+<body>
+   <h1 align="center">Registration Form</h1>
+        <br/>
+         <marquee ><h3 style="color:white;">New Joinee? Sign Up here 
+        to get the best answers 
+        for any questions</h3></marquee> 
+        <form action="RegistrationPage" method="post" name="myform" onclick="checkPass()"  onreset="resetform()">
+        
+        <table id="table1"  cellspacing="5" cellpadding="3">
+          <tr> 
+              <td>Employee Id </td>
+              <td> <input type="text" name="emp_id" placeholder="Employee Id" pattern="[0-9]+" title="Employee id should contain only numbers" required/></td>
+          </tr>
+          <tr>
+                <td>Employee Name </td>
+                <td><input type="text" name="emp_name"  placeholder="Employee Name" pattern="[A-Za-z]+" title="Employee id should contain only alphabets" required/></td>
+          </tr>
+          <tr> 
+              <td>Employee Designation</td><td> <input type="text" name="emp_designation" placeholder="Designation" required/></td>
+          </tr>
+           <tr>
+                <td>Employee Location </td>
+                <td> <select name="locations">
+                   <option>Select</option>
+                   <option>Banglore</option>
+                   <option>Chennai</option>
+                   <option>Hyderabad</option>
+                   <option>Mumbai</option>
+                   <option>Pune</option>
+                 </select></td> </tr>
+            <tr> 
+                <td>User Name </td>
+                <td><input type="text" name="user_name" placeholder="username" required/></td>
+            </tr>
+              
+            <tr>
+                 <td>Password</td> 
+                 <td><input type="password" name="password" placeholder="password"  pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*]).{8,12}" title="Password must contain one uppercase and  one lowercase one number and one special character   Password must contain atleast 8 characters and maximum of 12 characters" required/></td>
+            </tr>
+            <tr>
+            <td>Confirm Password</td>
+            <td><input type="password" name="confirmPassword" placeholder="re_type password" required></td>
+            <tr> </tr>
+             <tr>  
+               <td><input type="reset" value="Reset"/> </td>
+               <td><input type="submit" value="Submit"/> </td>
+              </tr> 
+         </table>
+         </form>
+</body>
+</html>
